@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { ThemeProvider } from "@/contexts/ThemeProvider";
-import Nav from "@/components/Nav/Nav";
+import Nav from "@/components/nav/Nav";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="bg-foreground min-h-screen flex flex-col">
+      <body className="bg-foreground min-h-screen flex flex-col font-poppins">
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
