@@ -7,7 +7,7 @@ const IconComponents: Record<IconNameType, FC<IconProps>> = {
   home: IconFitness
 };
 
-const Icon: FC<IconWithNameProps> = ({ name, size, color}) => {
+const Icon: FC<IconWithNameProps> = ({ name, size = 1, color = "#fff"}) => {
   const IconComponent = IconComponents[name];
 
   if(!IconComponent) {

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { ThemeProvider } from "@/contexts/ThemeProvider";
 import Nav from "@/components/nav/Nav";
+import { ScrollContextProvider } from "@/contexts/ScrollContext";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,16 +16,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="bg-foreground min-h-screen flex flex-col font-poppins">
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          enableSystem
-          disableTransitionOnChange
-        >
+      <body className="min-h-screen flex flex-col font-poppins">
+        <ScrollContextProvider>
           <Nav />
           {children}
-        </ThemeProvider>
+        </ScrollContextProvider>
       </body>
     </html>
   );
