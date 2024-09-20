@@ -7,6 +7,8 @@ export type SelectsType = {
   name: string;
   suffix?: string;
   options: OptionsType[];
+  onChange?: React.ChangeEventHandler<HTMLSelectElement>;
+  onFocus?: React.FocusEventHandler<HTMLSelectElement>;
 };
 
 export type FormSelectsType = SelectsType[];
